@@ -31,9 +31,7 @@ so on a lark I took a couple of hours to have my own stab at it.
 
 3. Edit `lib/config.js` as required
 
-4. node `lib/urldb.js` (creates tables)
-
-5. node `us_server.js` (runs the server -- probably want to make into a daemon)
+3. node `us_server.js` (runs the server -- probably want to make into a daemon)
 
 ## API Reference
 
