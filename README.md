@@ -5,17 +5,35 @@ us_server.js is a very simple link-shortening server.
 ## Motivation
 
 My organization needed a its own link-shortener that it could curate.
-The problem seemed to trivial to justify licensing commercial solutions.
+The problem seemed too trivial to justify licensing commercial solutions,
+so on a lark I took a couple of hours to have my own stab at it.
 
 ## Installation
 
 1. Install mysql somewhere
-2. create the necessary users and database
-3. Edit lib/config.js as required
-4. node lib/urldb.js (creates tables)
-5. node us_server.js (runs the server -- probably want to make into a daemon)
 
-Provide code examples and explanations of how to get the project.
+2. create the necessary users and database
+
+```mysql
+   create database urlshortener;
+   create user us_getter@localhost identified by 'yaddayadda';
+   create user us_setter@localhost identified by 'yoodayooda';
+   grant select on urlshortener.* to us_getter@localhost;
+   grant ALL    on urlshortener.* to us_setter@localhost;
+   flush privileges;
+```
+
+3. create a `us_db_creds.json` file like:
+
+```json
+   { "host": "localhost", "user": "us_setter", "password": "xxxxxxxx" }
+```
+
+3. Edit `lib/config.js` as required
+
+4. node `lib/urldb.js` (creates tables)
+
+5. node `us_server.js` (runs the server -- probably want to make into a daemon)
 
 ## API Reference
 
