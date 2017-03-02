@@ -1,0 +1,17 @@
+{
+  "name": "us",
+  "version": "1.0.0",
+  "description": "An URL-shortening service",
+  "main": "us_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Jacobowitz",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.5",
+    "minimist": "^1.2.0",
+    "mysql": "^2.13.0",
+    "valid-url": "^1.0.9"
+  }
+}

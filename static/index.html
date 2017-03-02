@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>URL Shortener</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">URL Shortener!</h1>
+        <hr>
+        <div id="inputdiv" style="font-size:125%;">
+            <span>Input URL:</span>
+            <input type="text" id="longurl" size="80">
+            <input type="button" id="doit" value="Shorten it!"><br>
+            <span>Suggested Short Name:<input type="text" id="suggested_short"></span>
+        </div>
+        <hr>
+        <div id="outputdiv">
+            <h3>Results</h3>
+            <table style="width: 65%; background-color: #d0d0d0;">
+                <tr><td style="width: 25%;">Message</td><td id="res_msg"></td></tr>
+                <tr><td>Original URL</td><td id="res_orig_url"></td></tr>
+                <tr style="font-size: 150%;"><td>Shortened URL</td><td id="res_short_url"></td></tr>
+                <tr><td>Created on</td><td id="res_create_date"></td></tr>
+            </table>
+        </div>
+        <pre id="debugpre"></pre>
+        <div id="scriptdiv">
+            <script src="submitter.js" type="text/javascript"></script>
+        </div>
+    </body>
+</html>
+
