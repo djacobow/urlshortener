@@ -31,7 +31,7 @@ so on a lark I took a couple of hours to have my own stab at it.
 
 3. Edit `lib/config.js` as required
 
-3. node `us_server.js` (runs the server -- probably want to make into a daemon)
+3. `node us_server.js` (runs the server -- probably want to make into a daemon)
 
 ## API Reference
 
@@ -64,7 +64,7 @@ the user is invited to create the shortened link.
 
 ## Contributors
 
-Dave Jacobowitz (david.jacobowitz@gmail.com)
+Dave Jacobowitz (david dot jacobowitz at gmail dot com)
 
 ## License
 
