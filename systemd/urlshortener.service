@@ -1,0 +1,16 @@
+[Unit]
+Description=Berkeley Lab URL Shortener
+
+[Service]
+Type=simple
+Restart=always
+User=dgj
+Group=dgj
+RestartSec=10
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+WorkingDirectory=/home/dgj/projects/urlshortener
+ExecStart=/usr/bin/node /home/dgj/projects/urlshortener/us_server.js
+
+[Install]
+WantedBy=multi-user.target
+
